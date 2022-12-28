@@ -1,0 +1,190 @@
+:root {
+  --dark-magenta: hsl(300, 43%, 22%);
+  --soft-pink: hsl(333, 80%, 67%);
+  --Dark-Grayish-Magenta: hsl(303, 10%, 53%);
+  --Light-Grayish-Magenta: hsl(300, 24%, 96%);
+  --White: hsl(0, 0%, 100%);
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+body {
+  font-family: "League Spartan", sans-serif;
+  font-size: 14px;
+}
+
+/*small*/
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+/*meduim*/
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+/*small*/
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+.container {
+  padding: 100px 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 768px) {
+  .section-proof {
+    background-image: url(../images/bg-pattern-top-desktop.svg),
+      url(../images/bg-pattern-bottom-desktop.svg);
+    background-position: left top, right bottom;
+    background-repeat: no-repeat;
+  }
+}
+@media (max-width: 768px) {
+  .section-proof {
+    background-image: url(../images/bg-pattern-top-mobile.svg),
+      url(../images/bg-pattern-bottom-mobile.svg);
+    background-position: left top, right bottom;
+    background-repeat: no-repeat;
+  }
+}
+.section-proof .top-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media (max-width: 768px) {
+  .top-container {
+    flex-direction: column;
+  }
+}
+.section-proof .top-container .text {
+  width: 400px;
+}
+
+@media (max-width: 768px) {
+  .section-proof .top-container .text {
+    width: 100%;
+    text-align: center;
+  }
+}
+.section-proof .top-container .text h1 {
+  font-weight: bold;
+  color: var(--dark-magenta);
+  font-size: 50px;
+  margin: 0;
+}
+.section-proof .top-container .text p {
+  color: var(--Dark-Grayish-Magenta);
+  padding-bottom: 20px;
+  font-size: 18px;
+}
+.section-proof .top-container .rate {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+@media (max-width: 768px) {
+  .section-proof .top-container .rate {
+    width: 100%;
+  }
+}
+.section-proof .top-container .rate-section {
+  background-color: var(--Light-Grayish-Magenta);
+  padding: 10px 40px 10px 30px;
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15px;
+}
+@media (max-width: 992px) {
+  .section-proof .top-container .rate-section {
+    flex-direction: column;
+  }
+}
+@media (max-width: 768px) {
+  .section-proof .top-container .rate-section {
+    width: 100%;
+  }
+}
+
+@media (min-width: 992px) {
+  .section-proof .top-container .rate-section:nth-child(2) {
+    margin-left: 70px;
+  }
+  .section-proof .top-container .rate-section:nth-child(3) {
+    margin-left: 140px;
+  }
+}
+.section-proof .top-container .rate .star-icons {
+  margin-right: 10px;
+}
+.section-proof .top-container .rate .star-icons img {
+  padding-right: 5px;
+  padding-top: 10px;
+}
+.section-proof .top-container .rate .review {
+  font-weight: bold;
+  color: var(--dark-magenta);
+  font-size: 16px;
+  padding-top: 10px;
+}
+
+.section-proof .bottom-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  padding-top: 25px;
+}
+.section-proof .bottom-container .col {
+  background-color: var(--dark-magenta);
+  border-radius: 8px;
+  padding: 18px;
+  height: 200px;
+}
+
+@media (min-width: 992px) {
+  .section-proof .bottom-container .col:nth-child(2) {
+    margin-top: 20px;
+  }
+  .section-proof .bottom-container .col:nth-child(3) {
+    margin-top: 40px;
+  }
+}
+.section-proof .bottom-container .col-info {
+  display: flex;
+  align-items: center;
+}
+.section-proof .bottom-container .col-info img {
+  border-radius: 50%;
+  width: 40px;
+}
+.section-proof .bottom-container .col-info .info {
+  padding-left: 18px;
+  padding-bottom: 12px;
+}
+.section-proof .bottom-container .col-info .info h2 {
+  margin-bottom: 0;
+  color: var(--White);
+  font-size: 18px;
+  font-weight: 500;
+}
+.section-proof .bottom-container .col-info .info span {
+  color: var(--soft-pink);
+}
+
+.section-proof .bottom-container .col-body {
+  color: var(--Light-Grayish-Magenta);
+  font-weight: 500;
+  padding: 0 10px;
+  line-height: 1.4;
+}
